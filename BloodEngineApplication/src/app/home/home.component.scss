@@ -1,0 +1,305 @@
+.home {
+    width: 100%;
+    height: 100%;
+}
+
+.blankDiv {
+    width: 40px;
+}
+
+.firstrow {
+    width: 100%;
+    display: inline-flex;
+}
+
+.searchBloodDonor {
+    border: 1px rgb(192, 0, 0) solid;
+    width: 300px;
+    background-color: white;
+    height: 100%;
+}
+
+.volunteersNeeded {
+    border: 1px rgb(192, 0, 0) solid;
+    width: 100%;
+    background-image: url('../../assets/images/classroom.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    line-height: 1;
+}
+
+@media screen and (max-width: 531px) {
+    .firstrow { display: flex; flex-flow: column; }
+    .searchBloodDonor { order: 1; width: 100%; }
+    .blankDiv {order: 2; width: 100%; height: 20px;}
+    .volunteersNeeded { order: 3; width: 100%; height: 60vh; }
+}
+
+.vnHeader {
+    color: white;
+    font-size: xx-large;
+    font-weight: 500;
+    text-align: center;
+}
+
+.vnText {
+    color: white;
+    font-size: x-large;
+    text-align: left;
+}
+
+.secondrow {
+    width: 100%;
+    border: 1px rgb(192, 0, 0) solid;
+    display: inline-flex;
+    opacity: 0.9;
+}
+
+.androidAppText {
+    width: 60%;
+    background-color: white;
+    padding: 20px;
+}
+
+.androidAppTextHeader {
+    color: rgb(192, 0, 0);
+    font-weight: 500;
+    font-size: xx-large;
+}
+
+.androidAppImage {
+    width: 40%;
+    background-image: url('../../assets/images/Phone.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.androidAppInnerDiv {
+    width: 100%;
+    display: inline-flex;
+}
+
+.androidAppLi {
+    width: 50%;
+}
+
+.androidAppBtn {
+    width: 50%;
+    text-align: right;
+    padding-right: 40px;
+}
+
+#arrow {
+    border-right:2px solid black;
+    border-bottom:2px solid black;
+    width:10px;
+    height:10px;
+    transform: rotate(-45deg);
+    margin-top:40px;
+}
+
+ul li {
+    position: relative;
+	padding-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  font-weight: 500;
+}
+
+ul li:before{
+   content: '';
+   position: absolute;
+   border-right:2px solid black;
+   border-bottom:2px solid black;
+   width:10px;
+   height:10px;
+   top: calc(50% - 4px);
+   left: -20px;
+   transform: translateY(-50%) rotate(-45deg);
+}
+
+.googlePlayStoreBtn {
+    background-image: url('../../assets/images/googleplaystore.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 208px;
+    height: 70px;
+    border: 0;
+    -webkit-transform: scale(0.8);
+    transform:scale(0.8);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    margin-top: 60px;
+}
+
+@media screen and (max-width: 531px) {
+    .secondrow { display: flex; flex-flow: column; }
+    .androidAppText { order: 1; width: 100%; text-align: center; }
+    .androidAppImage { order: 2; width: 100%; height: 150px; }
+    .androidAppInnerDiv { display: flex; flex-flow: column; }
+    .androidAppLi { order: 1; width: 100%; text-align: left; }
+    .androidAppBtn { order: 2; width: 100%; padding-right: 0; }
+    .googlePlayStoreBtn { margin-top: 0; }
+}
+
+.thirdrow {
+    width: 100%;
+    border: 1px rgb(192, 0, 0) solid;
+    padding: 20px;
+    background-color: white;
+    opacity: 0.9;
+}
+
+.thirdrowFirst {
+    width: 100%;
+    display: inline-flex;
+}
+
+.thirdrowFirstImage {
+    width: 30%;
+}
+
+.thirdrowFirstText {
+    width: 70%;
+}
+
+.thirdrowSecond {
+    width: 100%;
+    display: inline-flex;
+}
+
+.thirdrowSecondImage {
+    width: 30%;
+}
+
+.thirdrowSecondText {
+    width: 70%;
+}
+
+.thirdrowThird {
+    width: 100%;
+    display: inline-flex;
+}
+
+.thirdrowThirdImage {
+    width: 30%;
+}
+
+.thirdrowThirdText {
+    width: 70%;
+}
+
+@media screen and (max-width: 531px) {
+    .thirdrowFirst { display: flex; flex-flow: column; }
+    .thirdrowSecond { display: flex; flex-flow: column; }
+    .thirdrowThird { display: flex; flex-flow: column; }
+
+    .thirdrowFirstText { order: 2; width: 100%; }
+    .thirdrowFirstImage { order: 1; width: 100%; height: 150px; }
+
+    .thirdrowSecondText { order: 1; width: 100%; }
+    .thirdrowSecondImage { order: 2; width: 100%; height: 150px; }
+
+    .thirdrowThirdText { order: 2; width: 100%; }
+    .thirdrowThirdImage { order: 1; width: 100%; height: 150px; }
+}
+
+.fourthrow {
+    width: 100%;
+    border: 1px rgb(192, 0, 0) solid;
+    background-color: white;
+    opacity: 0.9;
+    padding: 20px;
+    display: inline-flex;
+}
+
+.fourthrow1 {
+    width: 25%;
+    text-align: center;
+}
+
+.fourthrow2 {
+    width: 25%;
+    text-align: center;
+}
+
+.fourthrow3 {
+    width: 25%;
+    text-align: center;
+}
+
+.fourthrow4 {
+    width: 25%;
+    text-align: center;
+}
+
+@media screen and (max-width: 531px) {
+    .fourthrow { display: flex; flex-flow: column; }
+    .fourthrow1 { order: 1; width: 100%; }
+    .fourthrow2 { order: 2; width: 100%; }
+    .fourthrow3 { order: 3; width: 100%; }
+    .fourthrow4 { order: 4; width: 100%; }
+}
+
+.fifthrow {
+    width: 100%;
+    display: inline-flex;
+}
+
+.fifthrowFirst {
+    border: 1px rgb(192, 0, 0) solid;
+    width: 30%;
+}
+
+.fifthrowSecond {
+    border: 1px rgb(192, 0, 0) solid;
+    width: 30%;
+}
+
+.fifthrowThird {
+    border: 1px rgb(192, 0, 0) solid;
+    width: 30%;
+}
+
+.fifthrowDivSep1 {
+    width: 5%;
+}
+
+.fifthrowDivSep2 {
+    width: 5%;
+}
+
+@media screen and (max-width: 531px) {
+    .fifthrow { display: flex; flex-flow: column; }
+    .fifthrowFirst { order: 1; width: 100%; }
+    .fifthrowDivSep1 { order: 2; width: 100%; height: 20px; }
+    .fifthrowSecond { order: 3; width: 100%; }
+    .fifthrowDivSep2 { order: 4; width: 100%; height: 20px; }
+    .fifthrowThird { order: 5; width: 100%; }
+}
+
+.sixthrow {
+    border: 1px rgb(192, 0, 0) solid;
+    width: 100%;
+}
+
+.filters {
+    padding: 15px 15px 15px 15px;
+    height: 100%;
+}
+
+.dropdownClass {
+
+}
+
+.buttonClass {
+    width: 100%;
+    height: 35px;
+    background-color: rgb(192, 0, 0);
+    border: 1px rgb(192, 0, 0) solid;
+    color: white;
+    font-size: 18px;
+}

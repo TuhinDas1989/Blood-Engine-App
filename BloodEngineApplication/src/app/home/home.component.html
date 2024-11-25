@@ -1,0 +1,257 @@
+<div class="home">
+    <div class="firstrow">
+        <div class="searchBloodDonor">
+            <form (ngSubmit)="onSubmit()" [formGroup]="form" class="filters">
+                <div style="text-align: center;">
+                    <div style="font-weight: 500; font-size: large; padding-bottom: 10px;">
+                        <span>Search Blood Donors</span>
+                    </div>
+                    <div style="padding-bottom: 10px;">
+                        <angular2-multiselect
+                            formControlName="country"
+                            [data]="countryData"
+                            [settings]="countrySettings"
+                            (onSelect)="onCountrySelect($event)"
+                            (onDeSelect)="OnCountryDeSelect($event)" >
+                        </angular2-multiselect>
+                    </div>
+                    <div style="padding-bottom: 10px;">
+                        <angular2-multiselect
+                            formControlName="state"
+                            [data]="stateData"
+                            [settings]="stateSettings"
+                            (onSelect)="onStateSelect($event)"
+                            (onDeSelect)="OnStateDeSelect($event)" >
+                        </angular2-multiselect>
+                    </div>
+                    <div style="padding-bottom: 10px;">
+                        <angular2-multiselect
+                            formControlName="district"
+                            [data]="districtData"
+                            [settings]="districtSettings" >
+                        </angular2-multiselect>
+                    </div>
+                    <div style="padding-bottom: 10px;">
+                        <angular2-multiselect
+                            formControlName="bloodGroup"
+                            [data]="bloodGroupData"
+                            [settings]="bloodGroupSettings" >
+                        </angular2-multiselect>
+                    </div>
+                    <div style="padding-top: 6px;">
+                        <button type="submit" class="buttonClass">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="blankDiv"></div>
+        <div class="volunteersNeeded">
+            <p class="vnHeader">Volunteers Needed</p>
+            <br><br><br><br><br><br><br><br><br>
+            <p class="vnText">Volunteer opportunities for supporting blood donations and other emergency services for your community.</p>
+        </div>
+    </div>
+    <div style="height: 20px;"></div>
+    <div class="secondrow">
+        <div class="androidAppText">
+            <h1 class="androidAppTextHeader">Checkout our Android App</h1>
+            <br>
+            <div class="androidAppInnerDiv">
+                <div class="androidAppLi">
+                    <ul>
+                        <li>Search blood donors near you.</li>
+                        <li>Easy requesting for blood donations.</li>
+                        <li>Stay updated on your donation requests.</li>
+                        <li>Track your blood donations.</li>
+                    </ul>
+                </div>
+                <div class="androidAppBtn">
+                    <button type="button" class="googlePlayStoreBtn" (onClick)="googlePlayStore()"></button>
+                </div>
+            </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" style="width: 208px;" class="buttonClass" (onClick)="onLearnMore1()">Learn More</button>
+        </div>
+        <div class="androidAppImage"></div>
+    </div>
+    <div style="height: 20px;"></div>
+    <div class="thirdrow">
+        <div class="thirdrowFirst">
+            <div class="thirdrowFirstImage">
+                <img src="../../assets/images/Blackboard.jpg" style="max-width: 100%; max-height: 100%;">
+            </div>
+            <div class="blankDiv"></div>
+            <div class="thirdrowFirstText">
+                <h1 style="font-weight: 500;">How much blood is taken in a Blood Donation?</h1>
+                <br>
+                <p style="font-size: larger; font-weight: 400;">
+                    For a whole blood donation, approximately 500 ml or one half liter of blood is collected.
+                    <br>
+                    For donations of other blood products, such as platelet or plasma, the amount collected
+                    depends on your height, weight and platelet count.
+                </p>
+                <br>
+                <button type="button" style="width: 208px;" class="buttonClass" (onClick)="onLearnMore2()">Learn More</button>
+            </div>
+        </div>
+        <div style="height: 20px;"></div>
+        <div class="thirdrowSecond">
+            <div class="thirdrowSecondText">
+                <h1 style="font-weight: 500;">Will donating blood hurt?</h1>
+                <br>
+                <p style="font-size: larger; font-weight: 400;">
+                    You might feel a slight sting in the beginning lasting only a couple of seconds, but there should be no discomfort during the donation.
+                </p>
+            </div>
+            <div class="blankDiv"></div>
+            <div class="thirdrowSecondImage">
+                <img src="../../assets/images/Woman.jpg" style="max-width: 100%; max-height: 100%;">
+            </div>
+        </div>
+        <div style="height: 20px;"></div>
+        <div class="thirdrowThird">
+            <div class="thirdrowThirdImage">
+                <img src="../../assets/images/Student.jpg" style="max-width: 100%; max-height: 100%;">
+            </div>
+            <div class="blankDiv"></div>
+            <div class="thirdrowThirdText">
+                <h1 style="font-weight: 500;">Am I eligible to donate blood?</h1>
+                <br>
+                <p style="font-size: larger; font-weight: 400;">
+                    Check with your local blood bank to determine the specific requirements. You must be at least 16 years of age, a minimum of 110 pounds, and in basic good health.
+                </p>
+                <br>
+                <button type="button" style="width: 208px;" class="buttonClass" (onClick)="onLearnMore3()">Learn More</button>
+            </div>
+        </div>
+    </div>
+    <div style="height: 20px;"></div>
+    <div class="fourthrow">
+        <div class="fourthrow1">
+            <div>
+                <img src="../../assets/images/iconfinder_donor_card_5016680.png" style="max-width: 50%; max-height: 50%;">
+            </div>
+            <div style="height: 20px;"></div>
+            <div>
+                <p style="font-weight: bold; font-size: x-large;">{{registeredDonors}}</p>
+                <p style="font-size: larger;">Registered Donors</p>
+            </div>
+        </div>
+        <div class="fourthrow2">
+            <div style="width: ;">
+                <img src="../../assets/images/iconfinder_blood_bank_5016672.png" style="max-width: 50%; max-height: 50%;">
+            </div>
+            <div style="height: 20px;"></div>
+            <div>
+                <p style="font-weight: bold; font-size: x-large;">{{bloodBanks}}</p>
+                <p style="font-size: larger;">Blood Banks</p>
+            </div>
+        </div>
+        <div class="fourthrow3">
+            <div>
+                <img src="../../assets/images/iconfinder_blood_donation_5016673.png" style="max-width: 50%; max-height: 50%;">
+            </div>
+            <div style="height: 20px;"></div>
+            <div>
+                <p style="font-weight: bold; font-size: x-large;">{{bloodRequests}}</p>
+                <p style="font-size: larger;">Blood Requests</p>
+            </div>
+        </div>
+        <div class="fourthrow4">
+            <div>
+                <img src="../../assets/images/iconfinder_donator_5016679.png" style="max-width: 50%; max-height: 50%;">
+            </div>
+            <div style="height: 20px;"></div>
+            <div>
+                <p style="font-weight: bold; font-size: x-large;">{{activeDonors}}</p>
+                <p style="font-size: larger;">Active Donors</p>
+            </div>
+        </div>
+    </div>
+    <div style="height: 20px;"></div>
+    <div class="fifthrow">
+        <div class="fifthrowFirst">
+            <div>
+                <img src="../../assets/images/Hands.jpg" style="max-width: 100%; max-height: 100%;">
+            </div>
+            <div style="text-align: center;">
+                <p style="font-weight: bold; font-size: large; padding-top: 10px;">Become a Volunteer</p>
+            </div>
+        </div>
+        <div class="fifthrowDivSep1"></div>
+        <div class="fifthrowSecond">
+            <div>
+                <img src="../../assets/images/Running_Over_Mountains.jpg" style="max-width: 100%; max-height: 100%;">
+            </div>
+            <div style="text-align: center;">
+                <p style="font-weight: bold; font-size: large; padding-top: 10px;">Host a Blood Donation</p>
+            </div>
+        </div>
+        <div class="fifthrowDivSep2"></div>
+        <div class="fifthrowThird">
+            <div>
+                <img src="../../assets/images/Texting.jpg" style="max-width: 100%; max-height: 100%;">
+            </div>
+            <div style="text-align: center;">
+                <p style="font-weight: bold; font-size: large; padding-top: 10px;">Make a Financial Donation</p>
+            </div>
+        </div>
+    </div>
+    <div style="height: 20px;"></div>
+    <div class="sixthrow">
+        <div>
+            <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'">
+                <mdb-carousel-item>
+                  <div class="view w-100">
+                    <img class="d-block w-100" src="../../assets/images/sponsor_1.jpg" alt="First slide">
+                    <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
+                  </div>
+                  <div class="carousel-caption">
+                    <h3 class="h3-responsive">Sponsor 1</h3>
+                    <p>Name of Sponsor 1</p>
+                  </div>
+                </mdb-carousel-item>
+                <mdb-carousel-item>
+                  <div class="view w-100">
+                    <img class="d-block w-100" src="../../assets/images/sponsor_2.jpg" alt="Second slide">
+                    <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
+                  </div>
+                  <div class="carousel-caption">
+                    <h3 class="h3-responsive">Sponsor 2</h3>
+                    <p>Name of Sponsor 2</p>
+                  </div>
+                </mdb-carousel-item>
+                <mdb-carousel-item>
+                  <div class="view w-100">
+                    <img class="d-block w-100" src="../../assets/images/sponsor_3.jpg" alt="Third slide">
+                    <div class="mask rgba-black-slight waves-light" mdbWavesEffect></div>
+                  </div>
+                  <div class="carousel-caption">
+                    <h3 class="h3-responsive">Sponsor 3</h3>
+                    <p>Name of Sponsor 3</p>
+                  </div>
+                </mdb-carousel-item>
+                <mdb-carousel-item>
+                    <div class="view w-100">
+                      <img class="d-block w-100" src="../../assets/images/sponsor_4.jpg" alt="Third slide">
+                      <div class="mask rgba-black-slight waves-light" mdbWavesEffect></div>
+                    </div>
+                    <div class="carousel-caption">
+                      <h3 class="h3-responsive">Sponsor 4</h3>
+                      <p>Name of Sponsor 4</p>
+                    </div>
+                </mdb-carousel-item>
+                <mdb-carousel-item>
+                    <div class="view w-100">
+                      <img class="d-block w-100" src="../../assets/images/sponsor_5.jpg" alt="Third slide">
+                      <div class="mask rgba-black-slight waves-light" mdbWavesEffect></div>
+                    </div>
+                    <div class="carousel-caption">
+                      <h3 class="h3-responsive">Sponsor 5</h3>
+                      <p>Name of Sponsor 5</p>
+                    </div>
+                </mdb-carousel-item>
+              </mdb-carousel>
+        </div>
+    </div>
+</div>

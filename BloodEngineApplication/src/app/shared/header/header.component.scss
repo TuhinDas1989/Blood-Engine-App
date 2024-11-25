@@ -1,0 +1,58 @@
+.matToolbar {
+    height: 60px;
+    background-color: rgb(192, 0, 0);
+    position: fixed;
+    z-index: 1;
+}
+
+.loginMenuButton {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.loginMenuButton:hover, .loginMenuButton:active{
+    color: lightgray;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover, a:active{
+    color: lightgray;
+}
+
+.navigation-items{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    padding-right: 15px;
+}
+
+mat-toolbar{
+    border-radius: 3px;
+}
+
+@media(max-width: 959px){
+    mat-toolbar{
+        border-radius: 0px;
+    }
+}
+
+.toolbar img {
+    margin: 0 16px;
+}
+
+.menu {
+    text-align: right;
+    width: 100%;
+    padding-right: 15px;
+}
+
+.nav-caption{
+    display: inline-block;
+    padding-left: 6px;
+}

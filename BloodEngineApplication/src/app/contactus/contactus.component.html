@@ -1,0 +1,93 @@
+<div class="contactusParent container-fluid">
+    <div class="contactusHeader">
+        <h1 style="font-size: xx-large; font-weight: 500;">Contact Us</h1>
+    </div>
+    <div style="height: 20px;"></div>
+    <div class="contactusEmailCall">
+        <div class="contactusEmail">
+            <div class="contactusEmailHeaderDiv">
+                <h2 class="contactusEmailHeader">Email Us</h2>
+            </div>
+            <div style="width: 100%; padding: 10px 20px 20px 20px;">
+                <p>
+                    Please use below form to contact us regarding any questions, concerns or comments you may have.
+                </p>
+            </div>
+        </div>
+        <div class="contactusSeperator"></div>
+        <div class="contactusCall">
+            <div class="contactusCallHeaderDiv">
+                <h2 class="contactusCallHeader">Call Us</h2>
+            </div>
+            <div style="width: 100%; padding: 10px 20px 20px 20px;">
+                <p>
+                    Please use email contact for any non emergency questions, concerns or comments. For any emergencies, give us a call at +91 0000000000
+                </p>
+            </div>
+        </div>
+    </div>
+    <div style="height: 20px;"></div>
+    <div class="contactForm">
+        <div class="contactFormHeaderDiv">
+            <h2 class="contactFormHeader">Contact Form</h2>
+        </div>
+        <div class="formDiv">
+            <form (ngSubmit)="onSubmit()" [formGroup]="form" class="filters">
+                <div style="text-align: center;">
+                    <div style="padding-bottom: 10px;">
+                        <mat-form-field class="full-width">
+                            <mat-label style="padding-left: 5px;">First Name</mat-label>
+                            <input matInput formControlName="firstName" value="">
+                        </mat-form-field>
+                    </div>
+                    <div style="padding-bottom: 10px;">
+                        <mat-form-field class="full-width">
+                            <mat-label style="padding-left: 5px;">Last Name</mat-label>
+                            <input matInput formControlName="lastName" value="">
+                        </mat-form-field>
+                    </div>
+                    <div style="padding-bottom: 10px;">
+                        <mat-form-field class="full-width">
+                            <mat-label style="padding-left: 5px;">Organization</mat-label>
+                            <input matInput formControlName="organization" value="">
+                        </mat-form-field>
+                    </div>
+                    <div style="padding-bottom: 10px;">
+                        <mat-form-field class="full-width">
+                            <mat-label style="padding-left: 5px;">Email ID</mat-label>
+                            <input matInput formControlName="emailId" value="">
+                        </mat-form-field>
+                    </div>
+                    <div style="padding-bottom: 10px;">
+                        <mat-form-field class="full-width">
+                            <mat-label style="padding-left: 5px;">Phone</mat-label>
+                            <input matInput formControlName="phone" value="">
+                        </mat-form-field>
+                    </div>
+                    <div style="padding-bottom: 10px;">
+                        <mat-form-field class="full-width">
+                            <mat-label style="padding-left: 5px;">Pin Code / Zip Code</mat-label>
+                            <input matInput formControlName="pinCode" value="">
+                        </mat-form-field>
+                    </div>
+                    <div style="padding-bottom: 10px;">
+                        <mat-form-field class="full-width">
+                            <mat-label style="padding-left: 5px;">Your query / concern / comments</mat-label>
+                            <textarea matInput formControlName="comment" style="height: 100px;"></textarea>
+                        </mat-form-field>
+                    </div>
+                    <div style="padding-bottom: 10px;">
+                        <re-captcha (resolved)="resolved($event)" 
+                            class="re-captcha"
+                            formControlName="recaptchaReactive" 
+                            siteKey="6LfWO-IZAAAAAK_VzSOGXNHu5vW_WajscwbI8a48">  
+                        </re-captcha>
+                    </div>
+                    <div style="padding-top: 10px;">
+                        <button type="submit" class="buttonClass">Send Email</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

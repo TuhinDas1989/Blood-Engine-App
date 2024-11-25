@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+html, body { 
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.cuppa-dropdown {
+    border: 1px rgb(192, 0, 0) solid !important;
+}
+
+.mat-form-field-flex {
+    border: 1px rgb(192, 0, 0) solid !important;   
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+    height: 0 !important;
+}
+
+.mat-focused .mat-form-field-label {
+    color: rgb(192, 0, 0) !important;
+}
+  
+.mat-form-field-underline {
+    background-color: rgb(192, 0, 0) !important;
+} 
+  
+.mat-form-field-ripple {
+   background-color: rgb(192, 0, 0) !important;
+}
+
+.makeItMiddle{
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,16 @@
+<div>
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav role="navigation" style="background-color: rgb(192, 0, 0);">
+      <app-sidenav-list (sidenavClose)="sidenav.close()" (notifyLoginAction)="setLoginAction($event)"></app-sidenav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>      
+      <app-header (sidenavToggle)="sidenav.toggle()" (notifyLoginAction)="setLoginAction($event)"></app-header>
+      <div style="height: 60px;"></div>
+      <main>
+        <router-outlet></router-outlet>
+        <br><br><br><br>
+      </main>
+      <app-footer></app-footer>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
